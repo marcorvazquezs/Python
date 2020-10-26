@@ -1,2 +1,2 @@
 # Python
-Python Portfolio / Automating the boring stuff
+🐍 Python Portfolio / Automating the boring stuff 🐍
