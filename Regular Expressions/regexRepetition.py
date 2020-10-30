@@ -15,12 +15,12 @@ print('')
 
 # This version requires area code
 phoneRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
-matchObject = phoneRegex.search('My phone number is 850-300-1022. Call me tomorrow.')
+matchObject = phoneRegex.search('My phone number is 123-123-1234. Call me tomorrow.')
 print(matchObject.group())
 
 # This version makes the area code optional 
-phoneArea = 'My phone number is 850-300-1022. Call me tomorrow.'
-phoneShort = 'My phone number is 300-1022. Call me tomorrow.'
+phoneArea = 'My phone number is 123-123-1234. Call me tomorrow.'
+phoneShort = 'My phone number is 123-1234. Call me tomorrow.'
 
 phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d')
 matchObject = phoneRegex.search(phoneArea)
