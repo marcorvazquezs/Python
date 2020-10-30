@@ -15,3 +15,6 @@
 * **pprint.pprint()** - "pretty print" function displays a dictionary value cleanly. 
 * **pprint.pformat()** - returns a string value of this output. 
 
+
+## Data Structures
+ * A list made up of dictionaries 
