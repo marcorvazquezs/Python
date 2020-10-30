@@ -40,7 +40,7 @@ if not foundNumber:
 import re 
 
 # use r to use a raw string and ignore escape characters
-phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') 
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # creates a regular expression object
 matchObject = phoneNumRegex.search(message)  #searches string for first occurence of pattern and returns a match object 
 print(matchObject.group()) # group method returns actual text
 
