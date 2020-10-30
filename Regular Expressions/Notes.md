@@ -30,3 +30,23 @@
 * Greedy matching match the longest string possible, nongreedy matching match the shortest string possible. 
   * Putting a question mark after the curly braces makes it do a nongreedy match. 
 
+### Character Classes 
+
+#### Recap
+
+* The regex method **findall()** is passed a string, and returns all matches in it, not just the first match 
+  * If the reges has 0 or 1 group, **findall()** returns a list of strings. 
+  * If the regex has 2 or more groups, **findall()** returns a list of tuples of strings. 
+  * You can make your own character classes with square brackets: **[aeiou]** 
+  * A **^** caret makes it a negative character class, matching anything not in the brackets: **[aeiou]**
+
+#### Shorthand Character Classes
+
+* **\\d** - Any numeric digit from 0 to 9
+* **\\D** - Any character that is *not* a numeric digit from 0 to 9
+* **\\w** - Any letter, numeric digit, or the underscore character. (Think of this as matching "word" characters.)
+* **\\W** - Any character that is *not* a letter, numeric digit, or the underscore character. 
+* **\\s** - Any space, tab, or newline character. (Think of this as matching "space" characters.)
+* **\\S** - Any character that is *not* a space, tab, or newline. 
+
+
