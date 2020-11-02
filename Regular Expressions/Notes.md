@@ -29,13 +29,18 @@
   * Leaving out the first or second number in the curly braces says there is no minimum or maximum. 
 * Greedy matching match the longest string possible, nongreedy matching match the shortest string possible. 
   * Putting a question mark after the curly braces makes it do a nongreedy match. 
+* The **^** means the string must start with the pattern. 
+* The **$** means the string must end with the pattern. 
+  * Both means the entire string must match the pattern. 
+* The **.** dot is a wildcard; it matches anything *except* newlines. 
+  * Pass **re.DOTALL** as the second argument to **re.compile()** to make the **.** dot match newlines as well. 
+  * Pass **re.IGNORECASE** as the second argument to **re.compile()** to make the matching case-insensitive.
+
 
 ### Character Classes 
 
-#### Recap
-
 * The regex method **findall()** is passed a string, and returns all matches in it, not just the first match 
-  * If the reges has 0 or 1 group, **findall()** returns a list of strings. 
+  * If the regex has 0 or 1 group, **findall()** returns a list of strings. 
   * If the regex has 2 or more groups, **findall()** returns a list of tuples of strings. 
   * You can make your own character classes with square brackets: **[aeiou]** 
   * A **^** caret makes it a negative character class, matching anything not in the brackets: **[aeiou]**
@@ -49,4 +54,9 @@
 * **\\s** - Any space, tab, or newline character. (Think of this as matching "space" characters.)
 * **\\S** - Any character that is *not* a space, tab, or newline. 
 
+#### Methods 
 
+* The **sub()** method will substitute matches with some other text. 
+* Using **\1**, **\2**, and so will substitute groups 1,2,etc in the regex pattern. 
+* Passing **re.VERBOSE** lets you add whitespace and comments to the regex string passed to **re.compile()**
+* If you want to pass multiple arguments (**re.DOTALL, re.IGNORECASE, re.VERBOSE**), combine them with the **|** bitwise operator. 
