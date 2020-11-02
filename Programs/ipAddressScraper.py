@@ -6,13 +6,13 @@ import re, pyperclip
 # regex to match IP Addresses
 ipRegex = re.compile(r'''
 (
-\d{1,3}       # first octet
+\d{1,3}        # first octet
 \.             # first period 
-\d{1,3}       # second octet 
+\d{1,3}        # second octet 
 \.             # second period
-\d{1,3}       # third octet 
+\d{1,3}        # third octet 
 \.             # third period 
-\d{1,3}       # fourth octet
+\d{1,3}        # fourth octet
 )
 ''', re.VERBOSE)
 
