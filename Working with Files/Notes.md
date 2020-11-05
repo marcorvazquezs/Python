@@ -61,3 +61,38 @@
   * The **Go** button will continue the program until the next breakpoint or end of the program. 
   * The **Quit** button will immediately terminate the program. 
   * Breakpoints can be set by right-clicking the file editor window and selecting "Set Breakpoint"
+
+## Spreadsheets 
+
+* **OpenPyXL** module handles Excel spreadsheets
+* Methods 
+  * **openpyxl.load_workbook(filename)** returns a workbook object
+  * **get_sheet_names()** and **get_sheet_by_name()** help get worksheet objects 
+  * **cell()** method returns a cell object from a sheet 
+    * square brackets in sheet['A1'] get cell objects 
+    * cell objects have a value member variable with the content of that cell
+* View and modify a sheet's name with its title member variable 
+* **save()** method to save workbook object 
+
+## PDFs
+
+* **PyPDF2** module can read and write PDFs
+* Methods: 
+  * **open()** method opens a pdf and passing the file object to **PdfFileReader()**
+  * **getPage()** method returns a page object from the PDF object
+  * **extractText()** method obtains text from a page 
+  * **PdfFileWriter()** creates new pdfs 
+  * **addPage()** appends new pages to a writer object 
+  * **write()** method saves changes
+
+## Word Documents 
+
+* **Python-Docx** can read and write .docx word files 
+* Open a word file with **docx.Document()**
+* **Paragraph Objects**
+  * have a text member variable contains the text as a string value 
+  * composed of "runs". The runs member variable of a paragraph object contains a list of run objects. 
+  * run objects also have a text member variable 
+  * run objects have a bold, italic, and underline member variable that can be set to True or False 
+  * paragraph and run objects have a style member variable that can be set to one of word's built-in styles 
+  * word files can be created by calling **add_paragraph()** and **add_run()** to append text content. 
